@@ -1,12 +1,16 @@
-# print hello 
-
-name: Hello World Demo
-
+name: Greet
 on: [push]
 
 jobs:
-  say-hello:
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: Say Hello
     steps:
-      - name: Run hello command
-        run: echo "Hello,Sandeep Kumar Patel"
+      - name: Hello World
+        id: hello
+        uses: skpatel-88/sandeep-hello-action@v1
+        with:
+          who-to-greet: 'Sandeep'
+      
+      - name: Get the output
+        run: echo "The greeting was ${{ steps.hello.outputs.greeting }}"
