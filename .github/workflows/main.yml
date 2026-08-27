@@ -10,7 +10,7 @@ jobs:
         id: hello
         uses: skpatel-88/sandeep-hello-action@v1
         with:
-          who-to-greet: 'Sandeep'
+          who-to-greet: 'this one this print by GHA'
       
       - name: Get the output
         run: echo "The greeting was ${{ steps.hello.outputs.greeting }}"
