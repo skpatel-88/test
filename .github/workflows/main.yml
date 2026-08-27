@@ -1,0 +1,12 @@
+# print hello 
+
+name: Hello World Demo
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run hello command
+        run: echo "Hello,Sandeep Kumar Patel"
